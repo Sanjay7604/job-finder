@@ -1,0 +1,44 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% include "header.html" %}
+
+<!-- Page Header -->
+
+<header class="masthead" style="background-color:#81C6E8">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Posted Jobs</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<section class="white-section">
+    <div class="container-fluid" id="job-list">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                  <th scope="col" class="col-heading">Title</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for job in jobs %}
+                <tr>
+                  <td class="table-row"><a href="{{url_for('view_job',i=job.id)}}">{{job.job_title}}</a></td>
+                  <td class="table-row"><a href="{{url_for('delete_job',i=job.id)}}" style="color:red">✘</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</section>
+
+
+{% include "footer.html" %}

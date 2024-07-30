@@ -1,0 +1,39 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% include "header.html" %}
+
+<!-- Page Header -->
+
+<header class="masthead" style="background-color:#81C6E8">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Hello {{current_user.name}}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<section class="white-section" id="search-bar">
+    <div class="container-fluid">
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <form action="{{url_for('search_list')}}" method="POST">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" id="job-search" name="job-search">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass fa"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+
+
+{% include "footer.html" %}

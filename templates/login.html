@@ -1,0 +1,40 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% include "header.html" %}
+
+<!-- Page Header -->
+
+<header class="masthead" style="background-color:#81C6E8">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Login</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<section class="colored-section">
+    <div class="container-fluid" id="login">
+        <div class="col">
+            {% with messages=get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <p style="color:red">{{message}}</p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="login-form mx-auto">
+                {{wtf.quick_form(form=form,novalidate=True,button_map={"submit":"dark"})}}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+{% include "footer.html" %}

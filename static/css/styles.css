@@ -1,0 +1,380 @@
+::selection {
+  color: #fff;
+  background: #ff9900;
+  text-shadow: none;
+}
+
+
+.container-fluid{
+background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+padding:7% 15%;
+}
+
+.colored-section{
+background-color:#81C6E8;
+}
+
+.white-section{
+background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+}
+
+
+h1 h2 h3{
+font-family:"Montserrat";
+}
+
+p{
+text-align:center;
+}
+
+.btn {
+font-size: 13px;
+font-weight:700;
+padding: 15px 25px;
+letter-spacing: 1px;
+text-transform: uppercase;
+border-radius: 0;
+font-family: 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar-custom .navbar-text{
+    color:#ffffff;
+}
+
+#mainNav {
+  position: absolute;
+  border-bottom: 0px solid #e9ecef;
+  background-color: black;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#mainNav .navbar-brand {
+  font-weight: 800;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 13px;
+  text-transform: uppercase;
+  color: #343a40;
+}
+
+#mainNav .navbar-nav > li.nav-item > a {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 1080px) {
+  #mainNav {
+    border-bottom: 0px solid transparent;
+    background: transparent;
+  }
+  #mainNav .navbar-brand {
+    padding: 10px 20px;
+    color: #ffffff;
+  }
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  #mainNav .navbar-nav > li.nav-item > a {
+    padding: 10px 20px;
+    color: #ffffff;
+  }
+  #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  #mainNav {
+    transition: background-color 0.2s;
+    /* Force Hardware Acceleration in WebKit */
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+  }
+  #mainNav.is-fixed {
+    /* when the user scrolls down, we hide the header right above the viewport */
+    position: fixed;
+    top: -67px;
+    transition: transform 0.2s;
+    border-bottom: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  #mainNav.is-fixed .navbar-brand {
+    color: #212529;
+  }
+  #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
+    color: #ff9900;
+  }
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a {
+    color: #212529;
+  }
+  #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
+    color: #ff9900;
+  }
+  #mainNav.is-visible {
+    /* if the user changes the scrolling direction, we show the header */
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+
+.navbar .navbar-toggler{
+background-color:#ffffff;
+}
+
+.navbar .navbar-toggler-icon{
+background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.dropdown-menu .navbar-text{
+color:#000000;
+}
+
+/* Header */
+
+header.masthead {
+  margin-bottom: 50px;
+  background: no-repeat center center;
+  background-color: #868e96;
+  background-attachment: scroll;
+  position: relative;
+  background-size: cover;
+  margin-bottom:0px;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+  opacity: 0.5;
+}
+
+header.masthead .page-heading,
+header.masthead .post-heading,
+header.masthead .site-heading {
+  padding: 200px 0 150px;
+  color: white;
+}
+
+header.masthead .page-heading,
+header.masthead .site-heading {
+  text-align: center;
+}
+
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+  font-size: 60px;
+  margin-top: 0;
+  font-weight:700;
+  font-family:Montserrat;
+}
+
+@media only screen and (min-width: 1080px) {
+  header.masthead .page-heading,
+  header.masthead .post-heading,
+  header.masthead .site-heading {
+    adding: 200px 0;
+  }
+}
+
+header.masthead .page-heading,
+header.masthead .site-heading {
+  text-align: center;
+}
+
+header.masthead .page-heading h1,
+header.masthead .site-heading h1 {
+  font-size: 50px;
+  margin-top: 0;
+}
+
+
+header.masthead .page-heading .subheading,
+header.masthead .site-heading .subheading {
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 1.1;
+  display: block;
+  margin: 10px 0 0;
+  font-family: "Roboto Slab";
+}
+
+@media only screen and (min-width: 1080px) {
+  header.masthead .page-heading h1,
+  header.masthead .site-heading h1 {
+    font-size: 80px;
+  }
+}
+
+
+/* CTA */
+
+#cta{
+text-align:center;
+}
+
+.cta-heading{
+padding:20px;
+font-family:"Roboto Slab";
+font-size:2rem;
+font-weight:600;
+}
+
+.cta-btn{
+margin:5%;
+}
+
+/* Features */
+
+.features-box{
+text-align:center;
+}
+
+.features-title{
+font-family:Montserrat;
+font-size:1.5rem;
+font-weight:600;
+}
+
+.icon{
+padding:10%;
+}
+
+/* Choice */
+
+#choice{
+text-align:center;
+padding:30%;
+}
+
+.choice-text{
+font-font:Montserrat;
+font-size:3rem;
+font-weight:900;
+}
+
+.choice-btn{
+margin:5%;
+}
+
+/* Login */
+
+.login-form{
+width:50%;
+}
+
+/* Register */
+
+.register-form{
+width:50%;
+}
+
+/* Details */
+
+#info{
+text-align:left;
+}
+
+#details .info-text p{
+display:inline-block;
+}
+
+
+#details .profile-pic{
+border-radius:100%;
+width:20%;
+margin:5% 5% 5% 0;
+}
+
+#edit-pic{
+display:inline-block;
+}
+
+#edit-pic input{
+margin:1%;
+padding: 5px 10px;
+border-radius: 5px;
+border: 1px ridge black;
+font-size: 0.8rem;
+}
+
+/* Add Job */
+
+.job-form{
+width:50%;
+}
+
+
+/* Job List */
+
+.col-heading{
+font-family:"Ubuntu";
+font-size:1.25rem;
+}
+
+.table-row a{
+font-family:"Ubuntu";
+color:#000000;
+}
+
+/* View Job Employee */
+
+p{
+font-family:"Ubuntu";
+}
+
+.edit-btn{
+margin-left:20%;
+}
+
+
+
+/* Employee Home */
+
+#search-bar .btn{
+padding:0;
+width:7rem;
+}
+
+#job-search{
+height:3rem;
+}
+
+
+/* Search List */
+
+
+.col-heading{
+font-family:"Ubuntu";
+font-size:1.25rem;
+}
+
+.table-row a{
+font-family:"Ubuntu";
+color:#000000;
+}
+
+/* Footer */
+Footer
+{
+background-color:#ffffff;
+text-align:center;
+font-weight:600;
+}
+
+.copyright
+{
+font-family:"Ubuntu";
+font-weight:400;
+padding-top:40px;
+padding-bottom:100px;
+}
+

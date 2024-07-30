@@ -1,0 +1,60 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% include "header.html" %}
+
+<!-- Page Header -->
+
+<header class="masthead" style="background-color:#81C6E8">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Details</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<section class="colored-section" id="details">
+    <div class="container-fluid" id="info">
+        <div class="col">
+            <div>
+                <img class="profile-pic" src="static/img/{{current_user.profile_pic}}" alt="profile-pic">
+                <form id="edit-pic" method="POST" enctype="multipart/form-data" action="{{url_for('details')}}">
+                    <input type="file" id="profile-pic" name="profile-pic" accept="image/png, image/jpeg" class="btn btn-outline-dark">
+                <br>
+                <input type="submit" name="submit" class="btn btn-outline-dark">
+                </form>
+            </div>
+            <div class="details-text">
+            <div>
+                <h2 class="info-text">Name: {{current_user.name}}</h2>
+            </div>
+            <br>
+            <div>
+                <h2 class="info-text">Email: {{current_user.email}}</h2>
+            </div>
+            <br>
+            <div>
+                <h2 class="info-text">About: {{current_user.about|safe}}</h2>
+            </div>
+            <br>
+            {% if current_user.status==0 %}
+                <div>
+                    <h2 class="info-text">Organization Name:{{current_user.organization_name}}</h2>
+                </div>
+                <br>
+                <div>
+                    <h2 class="info-text">Address: {{current_user.address}}</h2>
+                </div>
+                <br>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include 'footer.html' %}

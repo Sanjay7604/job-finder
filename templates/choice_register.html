@@ -1,0 +1,21 @@
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% include "header.html" %}
+
+
+<section class="colored-section">
+    <div class="container-fluid" id="choice">
+        <div class="col">
+            <div>
+                <h3 class="choice-text">Are you an Employee or Employer?</h3>
+            </div>
+            <div>
+                <a class="choice-btn btn btn-lg btn-dark" role="button" href="{{url_for('register',i=1)}}">Employee</a>
+                <a class="choice-btn btn btn-lg btn-dark" role="button" href="{{url_for('register',i=0)}}">Employer</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% include "footer.html" %}
